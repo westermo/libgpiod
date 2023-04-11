@@ -3,7 +3,7 @@
 
 AC_PREREQ([2.69])
 
-AC_INIT([libgpiod], [2.0])
+AC_INIT([libgpiod], [2.0.1])
 AC_SUBST(EXTRA_VERSION, [])
 
 AC_DEFINE_UNQUOTED([GPIOD_VERSION_STR],
@@ -25,7 +25,7 @@ AC_SUBST(VERSION_STR, [$PACKAGE_VERSION$EXTRA_VERSION])
 #
 # Define the libtool version as (C.R.A):
 # NOTE: this version only applies to the core C library.
-AC_SUBST(ABI_VERSION, [3.0.0])
+AC_SUBST(ABI_VERSION, [3.1.0])
 # Have a separate ABI version for C++ bindings:
 AC_SUBST(ABI_CXX_VERSION, [2.0.0])
 # ABI version for libgpiosim (we need this since it can be installed if we
