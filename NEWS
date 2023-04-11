@@ -2,6 +2,16 @@
 # SPDX-FileCopyrightText: 2017-2021 Bartosz Golaszewski <bartekgola@gmail.com>
 # SPDX-FileCopyrightText: 2023 Bartosz Golaszewski <bartosz.golaszewski@linaro.org>
 
+libgpiod v2.0.1
+===============
+
+Bug fixes:
+- sanitize the arguments in gpiod_line_config_set_output_values()
+- make the chip file descriptor blocking in the core library so that calls to
+  gpiod_chip_read_info_event() behave as advertised in the docs
+- fix setting the event clock type in gpiomon
+- fix the regex pattern for version strings
+
 libgpiod v2.0
 =============
 
