@@ -2,6 +2,16 @@
 # SPDX-FileCopyrightText: 2017-2021 Bartosz Golaszewski <bartekgola@gmail.com>
 # SPDX-FileCopyrightText: 2023 Bartosz Golaszewski <bartosz.golaszewski@linaro.org>
 
+libgpiod v2.0.2
+===============
+
+Bug fixes:
+- fix a segfault in the GLib wrapper around libgpiosim
+- fix a race condition in libgpiosim
+- remove an implicit dependency on ncurses in gpio-tools tests
+- make value toggling in gpio-tools tests more reliable by removing hard-coded
+  sleeps in favor of actively waiting for value changes
+
 libgpiod v2.0.1
 ===============
 
