@@ -73,7 +73,7 @@ AC_DEFUN([HEADER_NOT_FOUND_CXX],
 
 # This is always checked (library needs this)
 AC_HEADER_STDC
-AC_FUNC_MALLOC
+#AC_FUNC_MALLOC
 AC_HEADER_STDBOOL
 AC_CHECK_FUNC([ioctl], [], [FUNC_NOT_FOUND_LIB([ioctl])])
 AC_CHECK_FUNC([open], [], [FUNC_NOT_FOUND_LIB([open])])
