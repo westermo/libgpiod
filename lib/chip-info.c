@@ -7,11 +7,12 @@
 #include <string.h>
 
 #include "internal.h"
+#include "uapi/gpio.h"
 
 struct gpiod_chip_info {
 	size_t num_lines;
-	char name[32];
-	char label[32];
+	char name[GPIO_MAX_NAME_SIZE];
+	char label[GPIO_MAX_NAME_SIZE];
 };
 
 GPIOD_API void gpiod_chip_info_free(struct gpiod_chip_info *info)
@@ -58,6 +59,7 @@ gpiod_chip_info_from_uapi(struct gpiochip_info *uapi_info)
 	 * the worst case (would have to be a weird kernel bug) it'll be empty.
 	 */
 	strncpy(info->name, uapi_info->name, sizeof(info->name));
+	info->name[GPIO_MAX_NAME_SIZE - 1] = '\0';
 
 	/*
 	 * The kernel sets the label of a GPIO device to "unknown" if it
