@@ -70,6 +70,7 @@ gpiod_chip_info_from_uapi(struct gpiochip_info *uapi_info)
 		strncpy(info->label, "unknown", sizeof(info->label));
 	else
 		strncpy(info->label, uapi_info->label, sizeof(info->label));
+	info->label[GPIO_MAX_NAME_SIZE - 1] = '\0';
 
 	return info;
 }
